@@ -1,0 +1,8 @@
+C:\Users\IBM_ADMIN\OneDrive\Projects\KanaConverter\KanaConverter\bin\Debug\KanaConverter.exe.config
+C:\Users\IBM_ADMIN\OneDrive\Projects\KanaConverter\KanaConverter\bin\Debug\KanaConverter.exe
+C:\Users\IBM_ADMIN\OneDrive\Projects\KanaConverter\KanaConverter\bin\Debug\KanaConverter.pdb
+C:\Users\IBM_ADMIN\OneDrive\Projects\KanaConverter\KanaConverter\obj\Debug\KanaConverter.csprojResolveAssemblyReference.cache
+C:\Users\IBM_ADMIN\OneDrive\Projects\KanaConverter\KanaConverter\obj\Debug\KanaConverter.exe
+C:\Users\IBM_ADMIN\OneDrive\Projects\KanaConverter\KanaConverter\obj\Debug\KanaConverter.pdb
+C:\Users\IBM_ADMIN\OneDrive\Projects\KanaConverter\KanaConverter\bin\Debug\Diphthongs.txt
+C:\Users\IBM_ADMIN\OneDrive\Projects\KanaConverter\KanaConverter\bin\Debug\RomajiKana.txt
