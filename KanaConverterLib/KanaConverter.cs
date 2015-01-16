@@ -21,8 +21,10 @@ namespace KanaConverterLib
 
         protected KanaConverter()
         {
-            Diphthongs = GetDiphthongs().ToList();
-            RomajiKanas = GetNormalConversion().ToList();
+            if (Diphthongs == null)
+                Diphthongs = GetDiphthongs().ToList();
+            if (RomajiKanas == null)
+                RomajiKanas = GetNormalConversion().ToList();
         }
 
         protected string ConvertRomajiToHiragana(string text)
