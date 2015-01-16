@@ -1,5 +1,5 @@
 ﻿using System;
-using KanaConverter;
+using KanaConverterLib;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace KanaConverterTests
@@ -7,22 +7,24 @@ namespace KanaConverterTests
     [TestClass]
     public class KanaConversionTests
     {
-        KanaConverter.BaseKanaConverter converter = new KanaConverter.BaseKanaConverter();
+        IKanaConverter converter;
         [TestMethod]
         public void converts_from_hir_to_kat()
         {
+            converter = new KanaKanaConverter();
             string hir = "あいうえおかきくけこさしすせそきゃびゃぎゃ";
             string kat = "アイウエオカキクケコサシスセソキャビャギャ";
-            string result = converter.ConvertHiraganaToKatakana(hir);
+            string result = converter.Convert(hir);
             Assert.AreEqual(kat, result);
         }
 
         [TestMethod]
         public void converts_from_kat_to_hir()
         {
+            converter = new KanaKanaConverter();
             string hir = "あいうえおかきくけこさしすせそきゃびゃぎゃ";
             string kat = "アイウエオカキクケコサシスセソキャビャギャ";
-            string result = converter.ConvertKatakanaToHiragana(kat);
+            string result = converter.Convert(kat);
             Assert.AreEqual(hir, result);
         }
     }

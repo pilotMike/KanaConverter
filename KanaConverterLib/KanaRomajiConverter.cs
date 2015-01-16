@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KanaConverter
+namespace KanaConverterLib
 {
-    public class KanaRomajiConverter : BaseKanaConverter, IKanaConverter
+    public class KanaRomajiConverter : KanaConverterLib.KanaConverter, IKanaConverter
     {
         public string Convert(string text)
         {

@@ -56,9 +56,9 @@
     <Compile Include="ConsumptionTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\KanaConverter\KanaConverter.csproj">
-      <Project>{a386660c-7121-4719-ab50-725a6a54abdb}</Project>
-      <Name>KanaConverter</Name>
+    <ProjectReference Include="..\KanaConverterLib\KanaConverterLib.csproj">
+      <Project>{85e73288-a8e0-4e4b-8eba-8ee0756c6e2c}</Project>
+      <Name>KanaConverterLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

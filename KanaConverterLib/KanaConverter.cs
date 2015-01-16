@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
-namespace KanaConverter
+namespace KanaConverterLib
 {
-    public class BaseKanaConverter
+    public abstract class KanaConverter
     {
         // Notes: the difference between hiragana and
         // katakana is 96, with katakana being lower.
@@ -21,13 +19,13 @@ namespace KanaConverter
         private const string DiphthongsUri = "Diphthongs.txt";
         private const string KanaUri = "RomajiKana.txt";
 
-        public BaseKanaConverter()
+        protected KanaConverter()
         {
             Diphthongs = GetDiphthongs().ToList();
             RomajiKanas = GetNormalConversion().ToList();
         }
 
-        public string ConvertRomajiToHiragana(string text)
+        protected string ConvertRomajiToHiragana(string text)
         {
             // first replace all diphthongs
             StringBuilder sb = new StringBuilder(text.ToLower());
@@ -37,7 +35,7 @@ namespace KanaConverter
             return result;
         }
 
-        public string ConvertRomajiToKatakana(string text)
+        protected string ConvertRomajiToKatakana(string text)
         {
             StringBuilder sb = new StringBuilder(text.ToLower());
             ReplaceCharacters(sb, false);
@@ -52,7 +50,7 @@ namespace KanaConverter
             RomajiKanas.ForEach(rk => sb.Replace(rk.Romaji, toHiragana ? rk.Hiragana : rk.Katakana));
         }
 
-        public string ConvertKanaToRomaji(string text)
+        protected string ConvertKanaToRomaji(string text)
         {
             StringBuilder sb = new StringBuilder(text.ToLower());
             Diphthongs.ForEach(d => sb.Replace(d.Hiragana, d.Romaji));
@@ -67,15 +65,24 @@ namespace KanaConverter
             ReplaceTsuWithNextCharacter(s, sb);
             return sb.ToString();
         }
+        private void ReplaceTsuWithNextCharacter(string s, StringBuilder sb)
+        {
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (s[i] == 'っ' || s[i] == 'ッ' && i < s.Length - 1)
+                    sb.Append(s[i + 1]);
+                sb.Append(s[i]);
+            }
+        }
 
-        public string ConvertHiraganaToKatakana(string text)
+        protected string ConvertHiraganaToKatakana(string text)
         {
             // change characters from ぁ to small ke, leave the rest the same
             var katEnum = text.Select(c => (char)((c > 0x3040 && c < 0x30F7) ? c + 96 : c));
             return String.Join("", katEnum);
         }
 
-        public string ConvertKatakanaToHiragana(string text)
+        protected string ConvertKatakanaToHiragana(string text)
         {
             // shift all katakana characters down to the hiragana equivalent,
             // up until 'vu', which doesn't have an equivalent.
@@ -83,6 +90,7 @@ namespace KanaConverter
             return String.Join("", hirEnum);
         }
 
+        #region StaticFunctions
         public static bool ContainsRomajiCharacters(string text)
         {
             return text.Any(s => s >= 'A' && s <= 'z');
@@ -137,7 +145,7 @@ namespace KanaConverter
         /// only from one to the other.
         /// </summary>
         /// <param name="text"></param>
-        /// <param name="destinationType"></param>
+        /// <param name="destinationType">force romaji, hiragana, katakana</param>
         /// <returns></returns>
         public static IKanaConverter GetConverter(string text, CharacterType destinationType)
         {
@@ -157,16 +165,11 @@ namespace KanaConverter
             throw new Exception("string does not contain any Kana or Romaji characters");
         }
 
-        private void ReplaceTsuWithNextCharacter(string s, StringBuilder sb)
-        {
-            for (int i = 0; i < s.Length; i++)
-            {
-                if (s[i] == 'っ' || s[i] == 'っ' && i < s.Length - 1)
-                    sb.Append(s[i + 1]);
-                sb.Append(s[i]);
-            }
-        }
+        #endregion StaticFunctions
 
+        
+
+        #region Initialize
         private IEnumerable<RomajiKana> GetDiphthongs()
         {
             return LoadRomajiKanas(DiphthongsUri);
@@ -194,18 +197,6 @@ namespace KanaConverter
                 }
             }
         }
-
-    }
-
-    public enum CharacterType
-    {
-        Romaji,Hiragana,Katakana,Unknown
-    }
-
-    public struct RomajiKana
-    {
-        public string Romaji;
-        public string Hiragana;
-        public string Katakana;
+        #endregion
     }
 }

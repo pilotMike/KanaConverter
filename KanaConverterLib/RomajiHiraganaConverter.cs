@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KanaConverter
+namespace KanaConverterLib
 {
-    public class RomajiKatakanaConverter : BaseKanaConverter, IKanaConverter
+    public class RomajiHiraganaConverter : KanaConverterLib.KanaConverter, IKanaConverter
     {
         public string Convert(string text)
         {
-            return ConvertRomajiToKatakana(text);
+            return ConvertRomajiToHiragana(text);
         }
     }
 }
