@@ -27,5 +27,15 @@ namespace KanaConverterTests
             string result = converter.Convert(kat);
             Assert.AreEqual(hir, result);
         }
+
+        [TestMethod]
+        public void removes_small_tsu_from_hiragana()
+        {
+            string input = "にっぽん、てっぱんやき";
+            converter = KanaConverter.GetConverter(input);
+            string result = converter.Convert(input);
+            string expected = "nippon、teppanyaki";
+            Assert.AreEqual(expected, result);
+        }
     }
 }

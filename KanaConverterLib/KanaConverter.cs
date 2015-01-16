@@ -74,7 +74,8 @@ namespace KanaConverterLib
             {
                 if (s[i] == 'っ' || s[i] == 'ッ' && i < s.Length - 1)
                     sb.Append(s[i + 1]);
-                sb.Append(s[i]);
+                else
+                    sb.Append(s[i]);
             }
         }
 
