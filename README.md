@@ -17,4 +17,5 @@ test classes.
 #Notes about the converter
 The way the tool is currently set up, it will not allow the input of hiragana 
 text to be converted to hiragana text. It also does not automatically remove 
-spaces, as I have yet to determine whether it should be included or not.
+spaces, as I have yet to determine whether it should be included or not, nor does it
+alter punctuation, except for changing - to ー.
