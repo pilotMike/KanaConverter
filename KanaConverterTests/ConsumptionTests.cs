@@ -13,17 +13,17 @@ namespace KanaConverterTests
             // to simulate how it would be consumed. This is why
             // you start with Test Driven Development, so you don't
             // try 3 ways of doing something.
-            string text = "gakkusei"; // received from text input
+            string text = "gakkou"; // received from text input
             IKanaConverter converter = KanaConverterLib.KanaConverter.GetConverter(text);
             string result = converter.Convert(text);
-            string expected = "がっくせい";
+            string expected = "がっこう";
             Assert.AreEqual(expected, result);
         }
 
         [TestMethod]
         public void returns_hiragana_katakana_converter()
         {
-            string input = "がっくせい";
+            string input = "がっこう";
             IKanaConverter result = KanaConverterLib.KanaConverter.GetConverter(input, CharacterType.Katakana);
             Assert.IsTrue(result is KanaKanaConverter);
         }
@@ -31,7 +31,7 @@ namespace KanaConverterTests
         [TestMethod]
         public void returns_hiragana_to_romaji_converter()
         {
-            string input = "がっくせい";
+            string input = "がっこう";
             IKanaConverter result = KanaConverterLib.KanaConverter.GetConverter(input);
             Assert.IsTrue(result is KanaRomajiConverter);
         }
