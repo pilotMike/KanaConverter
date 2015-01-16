@@ -1,4 +1,6 @@
 # KanaConverter
+**To run the app, run KanaConverter_WPF exe.
+
 The goal of this project is to allow the conversion between Japanese and Roman 
 letters in addition to the conversion between Hiragana and Katakana. It 
 appears to be appropriately functional.
