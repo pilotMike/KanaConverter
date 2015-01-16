@@ -1,0 +1,6 @@
+C:\Users\IBM_ADMIN\OneDrive\Projects\KanaConverter\KanaConverterLib\bin\Release\Diphthongs.txt
+C:\Users\IBM_ADMIN\OneDrive\Projects\KanaConverter\KanaConverterLib\bin\Release\RomajiKana.txt
+C:\Users\IBM_ADMIN\OneDrive\Projects\KanaConverter\KanaConverterLib\bin\Release\KanaConverterLib.dll
+C:\Users\IBM_ADMIN\OneDrive\Projects\KanaConverter\KanaConverterLib\bin\Release\KanaConverterLib.pdb
+C:\Users\IBM_ADMIN\OneDrive\Projects\KanaConverter\KanaConverterLib\obj\Release\KanaConverterLib.dll
+C:\Users\IBM_ADMIN\OneDrive\Projects\KanaConverter\KanaConverterLib\obj\Release\KanaConverterLib.pdb

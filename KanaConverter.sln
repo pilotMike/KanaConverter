@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KanaConverter", "KanaConverter\KanaConverter.csproj", "{A386660C-7121-4719-AB50-725A6A54ABDB}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KanaConverterTests", "KanaConverterTests\KanaConverterTests.csproj", "{04A4BC8F-D9EF-49AB-9D94-C9B71CD5341F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KanaConverterLib", "KanaConverterLib\KanaConverterLib.csproj", "{85E73288-A8E0-4E4B-8EBA-8EE0756C6E2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KanaConverter_WPF", "KanaConverter_WPF\KanaConverter_WPF.csproj", "{880A1300-B89D-4045-B040-15F7C92FA234}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A386660C-7121-4719-AB50-725A6A54ABDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A386660C-7121-4719-AB50-725A6A54ABDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A386660C-7121-4719-AB50-725A6A54ABDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A386660C-7121-4719-AB50-725A6A54ABDB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{04A4BC8F-D9EF-49AB-9D94-C9B71CD5341F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{04A4BC8F-D9EF-49AB-9D94-C9B71CD5341F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04A4BC8F-D9EF-49AB-9D94-C9B71CD5341F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,6 +23,10 @@ Global
 		{85E73288-A8E0-4E4B-8EBA-8EE0756C6E2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85E73288-A8E0-4E4B-8EBA-8EE0756C6E2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85E73288-A8E0-4E4B-8EBA-8EE0756C6E2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{880A1300-B89D-4045-B040-15F7C92FA234}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{880A1300-B89D-4045-B040-15F7C92FA234}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{880A1300-B89D-4045-B040-15F7C92FA234}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{880A1300-B89D-4045-B040-15F7C92FA234}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

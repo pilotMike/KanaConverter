@@ -31,7 +31,7 @@ namespace KanaConverterLib
             StringBuilder sb = new StringBuilder(text.ToLower());
             ReplaceCharacters(sb, true);
             // now, replace any lingering consonants (hopefully that's all that's left) with a small 'tsu'
-            string result = Regex.Replace(sb.ToString(), "[a-zA-Z]", "っ"); // this will probably fail
+            string result = Regex.Replace(sb.ToString(), "[a-zA-Z]", "っ");
             return result;
         }
 
@@ -40,7 +40,7 @@ namespace KanaConverterLib
             StringBuilder sb = new StringBuilder(text.ToLower());
             ReplaceCharacters(sb, false);
             // now, replace any lingering consonants (hopefully that's all that's left) with a small 'tsu'
-            string result = Regex.Replace(sb.ToString(), "[a-zA-Z]", "ッ"); // this will probably fail
+            string result = Regex.Replace(sb.ToString(), "[a-zA-Z]", "ッ");
             return result;
         }
 
@@ -65,6 +65,7 @@ namespace KanaConverterLib
             ReplaceTsuWithNextCharacter(s, sb);
             return sb.ToString();
         }
+
         private void ReplaceTsuWithNextCharacter(string s, StringBuilder sb)
         {
             for (int i = 0; i < s.Length; i++)
@@ -166,8 +167,6 @@ namespace KanaConverterLib
         }
 
         #endregion StaticFunctions
-
-        
 
         #region Initialize
         private IEnumerable<RomajiKana> GetDiphthongs()
