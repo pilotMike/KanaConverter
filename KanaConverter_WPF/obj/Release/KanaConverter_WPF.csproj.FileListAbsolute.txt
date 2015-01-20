@@ -31,3 +31,6 @@ C:\Users\IBM_ADMIN\OneDrive\Projects\KanaConverter\KanaConverter_WPF\obj\Release
 C:\Users\IBM_ADMIN\OneDrive\Projects\KanaConverter\KanaConverter_WPF\obj\Release\KanaConverter_WPF.csproj.GenerateResource.Cache
 C:\Users\IBM_ADMIN\OneDrive\Projects\KanaConverter\KanaConverter_WPF\obj\Release\KanaConverter_WPF.exe
 C:\Users\IBM_ADMIN\OneDrive\Projects\KanaConverter\KanaConverter_WPF\obj\Release\KanaConverter_WPF.pdb
+G:\OneDrive\Projects\KanaConverter\KanaConverter_WPF\bin\Release\KanaConverter_WPF.exe.config
+G:\OneDrive\Projects\KanaConverter\KanaConverter_WPF\obj\Release\KanaConverter_WPF.exe
+G:\OneDrive\Projects\KanaConverter\KanaConverter_WPF\obj\Release\KanaConverter_WPF.pdb
