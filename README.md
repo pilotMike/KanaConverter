@@ -14,7 +14,7 @@ for determining the type of text and for getting a converter. If a conversion de
 is not provided, it will assume Hiragana<->Romaji. For usages, see the test project's
 test classes.
 
-#Notes about the converter
+# Notes about the converter
 The way the tool is currently set up, it will not allow the input of hiragana 
 text to be converted to hiragana text. It also does not automatically remove 
 spaces, as I have yet to determine whether it should be included or not, nor does it
